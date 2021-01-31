@@ -1,0 +1,32 @@
+<div>
+    <h1>
+Coupons    </h1>
+    <table>
+       <tr>
+           <th>id</th>
+           <th>companyId</th>
+           <th>categeory</th>
+           <th>title</th>
+           <th>descrription</th>
+           <th>price</th>
+           <th>image</th> 
+           <th>buy</th> 
+           <th>delete</th> 
+
+ 
+       </tr>
+               <tr *ngFor="let cup of this.coupouns">
+           <td>{{cup.id}}</td>
+           <td>{{cup.companyId}}</td>
+           <td>{{cup.categeory}}</td>
+           <td>{{cup.title}}</td>
+           <td>{{cup.descrription}}</td>
+           <td>{{cup.price}}</td>
+           <td>{{cup.image}}</td>
+           <td><button mat-button mat-mini-fab color="warn" style="font-size: x-large; float: right; margin-right: 10px;" (click)="deleteCustomer()">          <mat-icon>$$</mat-icon>           </button></td>
+           <td><button mat-button mat-mini-fab color="accent" style="font-size: x-large; float: right; margin-right: 10px;" (click)="deleteCustomer()">          <mat-icon>delete</mat-icon>           </button></td>
+
+   
+       </tr>
+   </table>
+   </div>

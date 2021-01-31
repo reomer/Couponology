@@ -1,0 +1,24 @@
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+            <th>   edit</th>
+            <th>   delete</th>
+
+
+        </tr>
+        <tr *ngFor="let comp of companies">
+            <td>{{comp.id}}</td>
+            <td>{{comp.name}}</td>
+            <td>{{comp.email}}</td>
+            <td>{{comp.password}}</td>
+            <td><button mat-button mat-mini-fab color="primary" style="font-size: x-large; float: right; margin-right: 10px;" (click)="updateCompany()">+</button></td> 
+           <td><button mat-button mat-mini-fab color="accent" style="font-size: x-large; float: right; margin-right: 10px;" (click)="deleteCompany()">          <mat-icon>delete</mat-icon>           </button></td>
+
+
+        </tr>
+    </table>
+ </div>
