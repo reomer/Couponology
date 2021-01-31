@@ -1,0 +1,25 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>money</mat-icon>
+      </button>
+      <span>Coupon System</span>
+      <span class="example-spacer"></span>
+           <button *ngIf="isLoggedIn();" mat-raised-button color="primary" [routerLink]="['/admin'] " routerLinkActive="router-link-active" >Admin</button>
+          <button *ngIf="isLoggedIn();" mat-raised-button color="primary" [routerLink]="['/company']" routerLinkActive="router-link-active">Company</button>
+          <button *ngIf="isLoggedIn();" mat-raised-button color="primary" [routerLink]="['/customer']" routerLinkActive="router-link-active">Customer</button>
+  
+          <ng-container *ngIf="isLoggedIn(); else elseTemplate">
+            <button mat-raised-button color="warm"[routerLink]="['/login']"(click)="showLogOutDialog()">Logout</button>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <button mat-raised-button color="warm" [routerLink]="['/login']">Login</button>
+  
+          </ng-template>
+          
+  
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"[routerLink]="['/login']">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
