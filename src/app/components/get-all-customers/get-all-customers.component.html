@@ -1,0 +1,24 @@
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>email</th>
+            <th>password</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        <tr *ngFor="let cus of customers">
+            <td>{{cus.id}}</td>
+            <td>{{cus.firstName}}</td>
+            <td>{{cus.lastName}}</td>
+            <td>{{cus.email}}</td>
+            <td>{{cus.password}}</td>
+            <button mat-button mat-mini-fab color="primary" style="font-size: x-large; float: right; margin-right: 10px;" (click)="updateCustomer()">+</button>
+            <!-- <button mat-button mat-fab color="primary" style="font-size: x-large; float: right; margin-right: 10px;" (click)="deleteCustomer()">+</button> -->
+            <td><button mat-button mat-mini-fab color="accent" style="font-size: x-large; float: right; margin-right: 10px;" (click)="deleteCustomer()">          <mat-icon>delete</mat-icon>           </button></td>
+
+        </tr>
+    </table>
+ </div>

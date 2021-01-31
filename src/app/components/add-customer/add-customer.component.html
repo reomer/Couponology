@@ -1,0 +1,27 @@
+<h1>Edit </h1> 
+<form #my_form="ngForm">
+    <input #email_input="ngModel" type="email" required email placeholder="email..." name="email" [(ngModel)]="this.email">
+        
+    <br><br>
+    <input #password_input="ngModel" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="password" name="password" [(ngModel)]="this.password">
+
+    <br><br>
+    <input #password_input="ngModel" type="firstName" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="firstName" name="firstName" [(ngModel)]="this.firstName">
+    <br><br>
+    <input #password_input="ngModel" type="lastName" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="lastName" name="lastName" [(ngModel)]="this.lastName">
+    <br><br>
+<!-- 
+    <input #password_input="ngModel" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="password" name="password" [(ngModel)]="credenials.password"> -->
+
+ 
+    
+    <button (click)="addCustomer()">add+</button>
+
+   
+    <!-- <p>{{"{"+"email:"+ credenials.email +","+"password:"+ credenials.password +","+ "type:"+credenials.type +"}"}}</p> -->
+</form>
+<br><br>

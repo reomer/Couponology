@@ -1,0 +1,80 @@
+<h1>Edit </h1> 
+<form #my_form="ngForm">
+    <input #email_input="ngModel" type="email" required email placeholder="email..." name="email" [(ngModel)]="this.email">
+        
+    <br><br>
+    <input #password_input="ngModel" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="password" name="password" [(ngModel)]="this.password">
+
+    <br><br>
+    <input #password_input="ngModel" type="firstName" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="firstName" name="firstName" [(ngModel)]="this.firstName">
+    <br><br>
+    <input #password_input="ngModel" type="lastName" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="lastName" name="lastName" [(ngModel)]="this.lastName">
+    <br><br>
+<!-- 
+    <input #password_input="ngModel" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+    required placeholder="password" name="password" [(ngModel)]="credenials.password"> -->
+
+ 
+    
+    <button (click)="updateCustomer()">update</button>
+
+   
+    <!-- <p>{{"{"+"email:"+ credenials.email +","+"password:"+ credenials.password +","+ "type:"+credenials.type +"}"}}</p> -->
+</form>
+<br><br>
+
+<div>
+    <h1>
+        Customer Details    </h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>email</th>
+            <th>password</th>
+
+        </tr>
+        <tr>
+
+            <td>{{customer.id}}</td>
+            <td>{{customer.firstName}}</td>
+            <td>{{customer.lastName}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.password}}</td>
+
+           
+
+        </tr>
+    </table>
+ </div>
+ <br>
+
+ <div>
+    <h1>
+Coupons    </h1>
+    <table>
+       <tr>
+           <th>id</th>
+           <th>companyId</th>
+           <th>categeory</th>
+           <th>title</th>
+           <th>descrription</th>
+           <th>price</th>
+           <th>image</th>     
+       </tr>
+               <tr *ngFor="let cup of customer.coupons">
+           <td>{{cup.id}}</td>
+           <td>{{cup.companyId}}</td>
+           <td>{{cup.categeory}}</td>
+           <td>{{cup.title}}</td>
+           <td>{{cup.descrription}}</td>
+           <td>{{cup.price}}</td>
+           <td>{{cup.image}}</td>
+   
+       </tr>
+   </table>
+   </div>
