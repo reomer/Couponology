@@ -1,0 +1,16 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  a {
+    font-size: large;
+    color: blue;
+    /* display: block; */
+    text-decoration:dashed;
+}
+
+
+.router-link-active{
+  font-size: x-large;
+  color: palevioletred;
+}
